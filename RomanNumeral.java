@@ -12,7 +12,7 @@ public class RomanNumeral {
     */
 
 	public static int convierte (String romanNumber) {
-
+		
 		if (romanNumber == ""){
 			throw new IllegalArgumentException ("RomanNumeral.convierte");
 		}
