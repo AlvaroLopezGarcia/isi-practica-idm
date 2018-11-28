@@ -10,87 +10,102 @@ import java.util.*;
 public class EmbotelladoraTest
 {
 
+	private Embotelladora embotelladora;
+
+	@Before      // Set up - Called before every test method.
+	public void setUp()
+	{
+		embotelladora = new Embotelladora();
+	}
+
 	//Test con botellas pequenas negativas
 	@Test (expected = IllegalArgumentException.class) // Este test decora la anotación @Test con la clase de la excepción esperada.
 	public void testForNegativePequenas()
 	{
-		Embotelladora.calculaBotellasPequenas(-10,10,10);
+		embotelladora.calculaBotellasPequenas(-10,10,10);
 	}
 
 	//Test con botellas grandes negativas
 	@Test (expected = IllegalArgumentException.class)
 	public void testForNegativeGrandes()
 	{
-		Embotelladora.calculaBotellasPequenas(10,-10,10);
+		embotelladora.calculaBotellasPequenas(10,-10,10);
 	}
 
 	//Test con litros totales < 0
 	@Test (expected = IllegalArgumentException.class)
 	public void testForNegativeTotal()
 	{
-		Embotelladora.calculaBotellasPequenas(10,10,-10);
+		embotelladora.calculaBotellasPequenas(10,10,-10);
 	}
 
 	//Test con pequenas=grandes=0
 	@Test (expected = IllegalArgumentException.class)
+	public void testForZeroBotellas()
+	{
+		embotelladora.calculaBotellasPequenas(0,0,10);
+	}
+
+	//Test con litros totales = 0
+	@Test (expected = IllegalArgumentException.class)
 	public void testForZeroTotal()
 	{
-		Embotelladora.calculaBotellasPequenas(0,0,10);
+		embotelladora.calculaBotellasPequenas(1,2,0);
 	}
 
 
 	@Test
 	public void testForSoloPequeñas()
 	{
-		assertTrue("testForSoloPequeñas_Error", 5 == Embotelladora.calculaBotellasPequenas(5,0,5));
+		assertTrue("testForSoloPequeñas_Error", 5 == embotelladora.calculaBotellasPequenas(5,0,5));
 	}
 
 
 	@Test
 	public void testForSoloGrandes()
 	{
-		assertTrue("testForSoloGrandes_Error", 0 == Embotelladora.calculaBotellasPequenas(0,2,10));
+		assertTrue("testForSoloGrandes_Error", 0 == embotelladora.calculaBotellasPequenas(0,2,10));
 	}
 
 
 	@Test
 	public void testForAmbasBotellas()
 	{
-		assertTrue("testForAmbasBotellas_Error", 4 == Embotelladora.calculaBotellasPequenas(5,2,14));
+		assertTrue("testForAmbasBotellas_Error", 4 == embotelladora.calculaBotellasPequenas(5,2,14));
 	}
 
 
 	@Test
 	public void testForIgualCantidad()
 	{
-		assertTrue("testForIgualCantidad_Error", 2 == Embotelladora.calculaBotellasPequenas(2,2,12));
+		assertTrue("testForIgualCantidad_Error", 2 == embotelladora.calculaBotellasPequenas(2,2,12));
 	}
 
 
 	@Test
 	public void testForMasPequenas()
 	{
-		assertTrue("testForMasPequenas_Error", 2 == Embotelladora.calculaBotellasPequenas(8,4,22));
+		assertTrue("testForMasPequenas_Error", 2 == embotelladora.calculaBotellasPequenas(8,4,22));
 	}
 
 
 	@Test
 	public void testForAbastecemosJustas()
 	{
-		assertTrue("testForAbastecemosJustas_Error", 6 == Embotelladora.calculaBotellasPequenas(6,2,16));
+		assertTrue("testForAbastecemosJustas_Error", 6 == embotelladora.calculaBotellasPequenas(6,2,16));
 	}
 
 
 	@Test
 	public void testForNoAbastecemos()
 	{
-		assertTrue("testForNoAbastecemos_Error", -1 == Embotelladora.calculaBotellasPequenas(1,2,14));
+		assertTrue("testForNoAbastecemos_Error", -1 == embotelladora.calculaBotellasPequenas(1,2,14));
 	}
 
 
 	@Test
 	public void testForAbastacemosSobra()
 	{
-		assertTrue("testForAbastacemosSobra_Error", 2 == Embotelladora.calculaBotellasPequenas(10,1,7));
+		assertTrue("testForAbastacemosSobra_Error", 2 == embotelladora.calculaBotellasPequenas(10,1,7));
 	}
 }

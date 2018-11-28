@@ -10,7 +10,8 @@ public class Embotelladora {
   * @return numero de botellas pequeñas necesarias
   * @throws IllegalArgumentException if params <= 0
   */
-  public static int calculaBotellasPequenas(int pequenas, int grandes, int total) {
+  
+  public int calculaBotellasPequenas(int pequenas, int grandes, int total) {
     //minimizar pequeñas (primero se rellenan grandes)
 
     if (pequenas < 0 || grandes < 0 || total <= 0 || (pequenas == 0 && grandes == 0)){

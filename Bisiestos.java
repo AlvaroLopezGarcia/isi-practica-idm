@@ -11,7 +11,7 @@ public class Bisiestos {
 		* @throws IllegalArgumentException if año < 0
 		*/
 
-	public static boolean esBisiesto (int año) {
+	public boolean esBisiesto (int año) {
 
 	if (año < 0) {
 		throw new IllegalArgumentException ("Bisiesto.esBisiesto");
