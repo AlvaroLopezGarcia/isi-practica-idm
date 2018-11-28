@@ -1,0 +1,5 @@
+Hemos tenido que adaptar nuestro test a su programa DescuentoBlackFriday.java.
+Hemos tenido que tener en cuenta la exception IllegalArgumentException
+en testprecionegativo y hemos tenido que adaptar el objeto precio a los atributos
+definidos en su bprograma .java.
+El test no ha devuelto ningún error.
