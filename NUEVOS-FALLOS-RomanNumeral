@@ -1,6 +1,6 @@
-Primero he copiado mi RomanNumeralTest.java y he cambiado el nombre de su RomanNumeralTest.java por el nombre de RomanNumeralTest2.java
+Primero he copiado mi RomanNumeralTest.java con el nombre de MiRomanNumeralTest.java.
 
-Después de realizar esto, he compilado el RomanNumeralTest.java y el AllTests.java y no ha pasado ninguno de los test que ha realizado mi grupo excepto el segundo test que si lo han tenido en cuenta pero elevan una excepción con un nombre diferente al empleado en la práctica de mi grupo.
+Después de realizar esto, he compilado MiRomanNumeralTest.java y el AllTests.java y no ha pasado ninguno de los test que ha realizado mi grupo excepto el segundo test que si lo han tenido en cuenta pero elevan una excepción con un nombre diferente al empleado en la práctica de mi grupo.
 
 El primer test falla porque no eleva ninguna excepción cuando la string que te meten es null.
 El tercer test falla porque no elevan ninguna excepción cuando le meten 4 I y lo mismo con los demás tests.
