@@ -1,6 +1,4 @@
-Primero he copiado mi BisiestoTest.java y lo he cambiado para que funcione con su Bisiestos.java, es decir, mi variable anyo es ahora new Bisiestos(); y la función que tienen implementado ellos es esBisiesto();
+Primero he copiado mi BisiestoTest.java con el nombre de MiBisiestoTest.java y lo he cambiado para que funcione con su Bisiestos.java, es decir, mi variable anyo es ahora new Bisiestos(); y la función que tienen implementado ellos es esBisiesto();
 
-Su test lo he renombrado como BisiestosTest.java.
-
-Después de realizar esto, he compilado el BisiestoTest.java y el AllTests.java y han pasado todos los texts excepto dos. Uno de ellos ha sido porque cuando le introducen un número negativo eleva una excepción y yo lo había implementado como falso y el otro error ha sido porque ellos han considerado que el año 0 no es bisiesto.
+Después de realizar esto, he compilado el MiBisiestoTest.java y el AllTests.java y han pasado todos los texts excepto dos. Uno de ellos ha sido porque cuando le introducen un número negativo eleva una excepción y yo lo había implementado como falso y el otro error ha sido porque ellos han considerado que el año 0 no es bisiesto.
 
