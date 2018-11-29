@@ -13,7 +13,7 @@ import junit.framework.JUnit4TestAdapter;
 
 // This section declares all of the test classes in the program.
 @RunWith (Suite.class)
-@Suite.SuiteClasses ({ MiEmbotelladoraTest.class })  // Add test classes here.
+@Suite.SuiteClasses ({ MiBisiestoTest.class })  // Add test classes here.
 
 public class AllTests
 {
